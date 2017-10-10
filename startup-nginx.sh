@@ -2,10 +2,12 @@
 
 set -x
 
-chown -R www-data:www-data /var/www/rutorrent
+chown -R rtorrent:rtorrent /var/www/rutorrent
+chmod 755 /var/www/rutorrent
 cp /downloads/.htpasswd /var/www/rutorrent/
 mkdir -p /downloads/.rutorrent/torrents
-chown -R www-data:www-data /downloads/.rutorrent
+chown -R rtorrent:rtorrent /downloads/.rutorrent
+chmod 755 /downloads/.rutorrent
 
 rm -f /etc/nginx/sites-enabled/*
 
